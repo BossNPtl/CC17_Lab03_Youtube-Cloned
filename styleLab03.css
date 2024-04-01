@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    --header : 56px;
+    --sidebar : 240px;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    /* background-color: lightblue; */
+    background-color: white;
+}
+
+.container {
+    display: flex;
+}
+
+
+header {
+    height: var(--header);
+    /* height: 56px; */
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px;
+}
+
+header .box-logo {
+    /* outline: 1px dashed red; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    gap: 8px;
+    flex-basis: 30%;
+
+}
+
+header .box-search {
+    /* outline: 1px dashed red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-basis: 40%;
+}
+
+header .box-menu {
+    /* outline: 1px dashed red; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    flex-basis: 30%;
+}
+
+header .box-logo .menu {
+    font-size: 24px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .box-logo .logoyoutube {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+header .box-logo .logoyoutube .text-upper {
+    color: gray;
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    right: -16px;
+}
+
+header .box-search .search {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    
+}
+
+/* header .box-search .search .search-bar {
+    padding: 16px 24px;
+} */
+
+header .box-search .search #search {
+    border: none;
+    padding: 1px 0px;
+    height: 26px;
+    flex-grow: 1;
+    outline: none;
+}
+
+header .search .search-bar {
+    height: 40px;
+    max-width: 536px;
+    border: 1px solid gray;
+    border-radius: 40px 0px 0px 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    padding: 16px 24px;
+}
+
+header .search .search-icon {
+    height: 40px;
+    max-width: 64px;
+    width: 35px;
+    min-width: 20px;
+    border: 1px solid gray;
+    border-radius: 0px 40px 40px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-left: none;
+}
+header .box-search .mic {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(244, 250, 255);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    padding: 8px;
+    margin-left: 8px;
+}
+
+header [class^=o-] {
+    width: 40px;
+    height: 40px;
+    /* background-color: aliceblue; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    padding: 8px;
+    margin-right: 9px;
+}
+header [class^=o-]:hover {
+    background-color: rgb(218, 218, 218);
+}
+header .box-search .mic:hover {
+    background-color: rgb(218, 218, 218);
+}
+header .box-menu .profile:hover {
+    background-color: rgb(218, 218, 218);
+}
+header .box-menu .profile {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(244, 250, 255);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    padding: 8px;
+    margin: 0px 0px 0px 6px;
+}
+
+/* Main */
+main {
+    display: flex;
+    min-height: calc(100vh - var(--header));
+    /* min-height: calc(100vh - 56px); */
+}
+
+/* sidebar */
+
+main .side-bar {
+    /* outline: 1px dashed blue; */
+    /* width: var(--sidebar); */
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    border-right: 1px solid rgba(128, 128, 128, 0.3);
+}
+main .side-bar .menu {
+    display: flex;
+    flex-direction: column;
+}
+main .side-bar .menu [class^=bar] {
+    /* outline: 1px dashed brown; */
+    height: 40px;
+    padding: 0px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    flex-wrap: nowrap;
+}
+main .side-bar .menu [class^=bar]:hover {
+    background-color: rgb(220, 220, 220);
+}
+main .side-bar .menu i {
+    font-size: 24px;
+    /* margin-right: 24px; */
+}
+main .side-bar .menu .name-bar {
+    font-size: 16px;
+    /* margin-left: 24px; */
+    padding-left: 24px;
+}
+hr {
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    height: 1px;
+    width: 70%;
+    margin: 0px auto;
+}
+/* content */
+
+main .content {
+    /* outline: 1px dashed blue; */
+    /* flex-grow: 1; */
+    /* width: calc(100% - var(--sidebar)); */
+    width: calc(100% - 240px);
+    padding: 20px;
+}
+main .content .show-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+main .content .column {
+    /* outline: 1px dashed yellow; */
+    height: 307px;
+    width: 368px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 13px;
+}
+main .content .column .video {
+    background-color: antiquewhite;
+    width: 100%;
+    height: 60%;
+    border-radius: 16px;
+    object-fit: cover;
+    
+}
+main .content .column video {
+    object-fit: cover;
+    border-radius: 16px;
+}
+.tryvideo {
+    width: 100%;
+    height: 100%;
+}
+main .content .column .file {
+    /* background-color: azure; */
+    background: none;
+    width: 100%;
+    height: 40%;
+    display: flex;
+}
+main .content .column .file .profile {
+    /* outline: 1px dashed brown; */
+    flex-basis: 15%;
+    display: flex;
+    justify-content: center;
+    padding: 8px 4px;
+}
+main .content .column .file .info {
+    /* outline: 1px dashed brown; */
+    flex-basis: 80%;
+    padding: 8px 0px;
+    background: none;
+}
+main .content .column .file .menu {
+    /* outline: 1px dashed brown; */
+    flex-basis: 5%;
+    display: none;
+    justify-content: center;
+    padding-top: 10px;
+    color: rgb(71, 71, 71);
+}
+main .content .column .file .profile .logo {
+    width: 36px;
+    height: 36px;
+    background-color: rgb(209, 209, 209);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+main .content .column .file .info .name {
+    font-weight: bold;
+    padding-bottom: 6px;
+    color: black;
+}
+main .content .column .file .info .proname {
+    padding-bottom: 6px;
+    color: rgb(71, 71, 71);
+    font-size: 0.9rem;
+}
+main .content .column .file .info .time {
+    padding-bottom: 6px;
+    color: rgb(71, 71, 71);
+    font-size: 0.9rem;
+}
+
+
+/* Active */
+
+main .content .column:hover {
+    cursor: pointer;
+}
+main .content .column:hover .menu {
+    display: flex;
+}
+
+@media (max-width: 800px) {
+    .main .side-bar {
+    width: 50px;
+    }
+    .name-bar {
+        display: none;
+    }
+    main .content {
+        width: calc(100% - 50px);
+    }
+    header .box-search .search .search-bar {
+        display: none;
+    }
+    header .box-search .search .search-icon {
+        border: none;
+        background: none;
+    }
+    header .box-logo .logoyoutube h1 {
+        display: none;
+    }
+    header .box-logo .logoyoutube .text-upper {
+        display: none;
+    }
+}
